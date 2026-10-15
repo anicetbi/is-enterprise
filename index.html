@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="IS Interprise — informations sur notre entreprise et contact WhatsApp.">
+<title>IS Interprise | Boutique & informations</title>
+<style>
+:root{--bg:#0b0e15;--panel:#131925;--gold:#f4c542;--text:#f7f7f8;--muted:#c5cad3;--green:#1da851}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f6f8;color:#171b24}
+header{background:var(--bg);color:var(--text);padding:18px 6%;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid #343947}
+.brand{font-weight:800;letter-spacing:1px;font-size:1.3rem;color:var(--gold)}.brand small{display:block;color:#fff;font-weight:400;letter-spacing:0;font-size:.82rem;margin-top:3px}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#f7f7f8;text-decoration:none;font-size:.95rem}nav a:hover{color:var(--gold)}
+.hero{background:radial-gradient(ellipse at 75% 40%,#3c2b13 0,#151822 40%,#080a0e 80%);color:white;padding:72px 6%;display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:center}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:.8rem;font-weight:bold}
+h1{font-size:clamp(2.4rem,5vw,4.7rem);line-height:1.02;margin:12px 0} .hero p{font-size:1.1rem;line-height:1.65;color:#d8dbe1;max-width:640px}
+.hero-art{min-height:250px;border:1px solid #6b572b;border-radius:22px;background:linear-gradient(135deg,#1d2431,#080a0e);display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;color:var(--gold);font-size:1.4rem;font-weight:bold}
+.btn{display:inline-block;background:var(--gold);color:#10131a;padding:14px 20px;border-radius:9px;text-decoration:none;font-weight:bold;margin-top:12px}
+section{padding:48px 6%}.section-title{text-align:center;margin:0 0 10px;font-size:2rem}.sub{text-align:center;color:#606775;margin:0 auto 28px;max-width:700px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid #e1e4e9;border-radius:16px;padding:24px;box-shadow:0 8px 24px #1018280b}.card h3{margin-top:0}.icon{font-size:2rem;color:#c3910a}
+.notice{background:#fff7dd;border:1px solid #f0d47a;border-radius:12px;padding:18px;line-height:1.6;color:#3f3517}
+.about{background:#fff}.contact{background:#111722;color:white;text-align:center}.contact p{color:#d5d9e1;line-height:1.6}.whatsapp{background:var(--green);color:white}
+footer{background:#080a0e;color:#c8ccd4;text-align:center;padding:24px 6%;font-size:.9rem}
+#ageOverlay{position:fixed;inset:0;background:#05070bea;display:flex;align-items:center;justify-content:center;padding:20px;z-index:10}
+.agebox{max-width:520px;background:white;border-radius:18px;padding:28px;text-align:center;box-shadow:0 20px 80px #0008}.agebox h2{margin-top:0}.agebox p{line-height:1.6;color:#454b55}.age-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.age-actions button{border:0;border-radius:8px;padding:12px 18px;font-weight:bold;cursor:pointer}.yes{background:#151a24;color:white}.no{background:#e8ebf0;color:#171b24}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.grid{grid-template-columns:1fr}header{align-items:flex-start}nav{gap:12px}.hero-art{min-height:160px}}
+</style>
+</head>
+<body>
+<div id="ageOverlay" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+  <div class="agebox">
+    <h2 id="ageTitle">Vérification de l’âge</h2>
+    <p>Ce site présente une entreprise liée à des produits soumis à des restrictions d’âge. Confirmez que vous avez l’âge légal requis dans votre pays pour consulter ces informations.</p>
+    <div class="age-actions">
+      <button class="yes" onclick="document.getElementById('ageOverlay').style.display='none'">J’ai l’âge légal requis</button>
+      <button class="no" onclick="document.body.innerHTML='<main style=&quot;font-family:Arial;padding:40px;text-align:center&quot;><h2>Accès non autorisé</h2><p>Veuillez quitter ce site si vous n’avez pas l’âge légal requis.</p></main>'">Je n’ai pas l’âge requis</button>
+    </div>
+  </div>
+</div>
+<header>
+  <div class="brand">IS INTERPRISE<small>Informations & contact</small></div>
+  <nav><a href="#accueil">Accueil</a><a href="#activites">Activités</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<section class="hero" id="accueil">
+  <div>
+    <div class="eyebrow">Bienvenue</div>
+    <h1>IS INTERPRISE</h1>
+    <p>Une entreprise avec un service client accessible et des informations claires. Contactez-nous pour connaître nos activités, nos disponibilités et les règles applicables à votre région.</p>
+    <a class="btn" href="#contact">Nous contacter</a>
+  </div>
+  <div class="hero-art" aria-label="Visuel décoratif">IS INTERPRISE<br><span style="font-size:.8rem;color:#fff;font-weight:normal">Professionnalisme · Service · Confiance</span></div>
+</section>
+<section id="activites">
+  <h2 class="section-title">Nos activités</h2>
+  <p class="sub">Pour toute demande, contactez directement notre équipe. La disponibilité et la conformité des produits dépendent de la législation locale.</p>
+  <div class="grid">
+    <article class="card"><div class="icon">◇</div><h3>Informations sur les produits</h3><p>Demandez des informations générales et vérifiez les restrictions légales applicables dans votre région.</p></article>
+    <article class="card"><div class="icon">◎</div><h3>Accessoires de chicha</h3><p>Contactez-nous pour poser vos questions sur les accessoires et leur disponibilité, sous réserve de la réglementation locale.</p></article>
+    <article class="card"><div class="icon">✉</div><h3>Service client</h3><p>Notre contact WhatsApp permet d’envoyer une demande et d’obtenir les informations nécessaires.</p></article>
+  </div>
+</section>
+<section class="about" id="apropos">
+  <h2 class="section-title">À propos de IS Interprise</h2>
+  <p class="sub">IS Interprise met l’accent sur une communication claire, un accueil professionnel et un service client accessible. Pour toute question concernant la légalité, l’âge minimum ou la disponibilité, veuillez nous contacter avant toute démarche.</p>
+  <div class="notice"><strong>Information importante :</strong> les produits de vapotage et du tabac peuvent présenter des risques pour la santé et sont soumis à des règles spécifiques. La vente ou la publicité peut être restreinte selon le pays. Ce site ne permet pas de paiement ni de commande en ligne.</div>
+</section>
+<section class="contact" id="contact">
+  <h2 class="section-title">Contactez-nous</h2>
+  <p>Pour ajouter le bouton WhatsApp, remplacez le numéro d’exemple dans le fichier par votre numéro au format international, sans le signe + ni les espaces.</p>
+  <a class="btn whatsapp" id="waLink" href="https://wa.me/254700000000?text=Bonjour%20IS%20Interprise" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
+  <p style="font-size:.85rem;margin-top:20px">Numéro provisoire : +254 700 000 000 — à remplacer avant publication.</p>
+</section>
+</main>
+<footer>© <span id="year"></span> IS Interprise. Tous droits réservés. · Informations soumises à la législation locale.</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
